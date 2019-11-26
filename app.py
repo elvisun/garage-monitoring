@@ -1,6 +1,5 @@
 import numpy as np
 import tensorflow as tf
-from matplotlib import pyplot as plt
 from flask import Flask
 from flask import jsonify
 
