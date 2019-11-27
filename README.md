@@ -17,3 +17,5 @@ $ sudo -H pip3 install tensorflow-2.0.0-cp37-cp37m-linux_armv7l.whl
 【Required】 Restart the terminal.
 
 ```
+
+For detail see [this](https://github.com/PINTO0309/Tensorflow-bin) repo.
