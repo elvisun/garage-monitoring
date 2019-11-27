@@ -19,3 +19,12 @@ $ sudo -H pip3 install tensorflow-2.0.0-cp37-cp37m-linux_armv7l.whl
 ```
 
 For detail see [this](https://github.com/PINTO0309/Tensorflow-bin) repo.
+
+
+## Automating the data collection
+`crontab -e`
+
+```
+*/5 * * * * ~/Documents/github/garage-monitoring/data-collection/take_picture.sh 2>&1
+*/30 * * * * gsutil -m cp -r /home/pi/Pictures/data-collection/ gs://garage-door-training-data
+```
