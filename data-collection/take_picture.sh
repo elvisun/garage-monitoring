@@ -2,5 +2,5 @@
 
 DATE=$(date +"%Y-%m-%d_%H%M%S")
 
-fswebcam -r 224x224 --no-banner /home/pi/Pictures/data-collection/$DATE.jpg
+fswebcam -S 30 -r 480x240 --no-banner /home/pi/Pictures/data-collection/$DATE.jpg
 
