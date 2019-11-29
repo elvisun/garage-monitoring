@@ -1,7 +1,13 @@
 import numpy as np
 import tensorflow as tf
-from flask import Flask
-from flask import jsonify
+from sms import send_message 
+
+LABELS = [
+    'both_open', 
+    'closed',
+    'left_open',
+    'right_open',
+]
 
 def run_prediction():
 
@@ -32,20 +38,14 @@ def run_prediction():
     # Use `tensor()` in order to get a pointer to the tensor.
     output_data = interpreter.get_tensor(output_details[0]['index'])[0]
 
-    output_data = output_data / 255
+    max_index = np.argmax(output_data)
 
-    return output_data
-
-app = Flask(__name__)
-
-@app.route("/")
-def home():
-    return "Hello, World!"
-    
-@app.route("/predict")
-def predict():
-    result = run_prediction().tolist()
-    return jsonify(result)
+    return (max_index, output_data[max_index])
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    result = run_prediction()
+    index = result[0]
+    confidence = result[1]/255.0
+    print(LABELS[index])
+    print(confidence)
+    send_message("door is closed!")
