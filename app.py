@@ -16,8 +16,7 @@ LABELS = [
 ]
 
 def run_prediction():
-
-    fileContent = tf.io.read_file('left_open.jpg', name="loadFile")
+    fileContent = tf.io.read_file('live.jpg', name="loadFile")
     image = tf.image.decode_jpeg(fileContent, name="decodeJpeg")
 
     resize_nearest_neighbor = tf.image.resize(image, size=[224,224], method=tf.image.ResizeMethod.NEAREST_NEIGHBOR)
