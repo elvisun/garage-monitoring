@@ -35,7 +35,7 @@ Refer to the article for details.
 First we setup another cron task to run `get_live_view.sh`, which take a picture every minute.
 
 ```
-*/5 * * * * bash ~/Documents/github/garage-monitoring/get_live_view.sh 2>&1
+* * * * * bash ~/Documents/github/garage-monitoring/get_live_view.sh 2>&1
 ```
 
 Then we run the `app.py` script which uses this picture to determine if our garage doors are closed, and send us an SMS reminder if they are not.
