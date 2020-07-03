@@ -1,5 +1,5 @@
 # garage-monitoring
-The repository contains the source code for **Smart garage control with Firebase AutoML and RaspberryPi**.
+The repository contains the source code for [Smart garage control with Firebase AutoML and RaspberryPi](https://medium.com/firebase-developers/smart-garage-control-with-firebase-automl-vision-edge-and-raspberrypi-834fa0eaa7c6).
 
 Here we will explore a creative way to monitor our garage doors - using a Raspberry Pi, Firebase, and a web camera, with some magic using machine learning to send us reminders when we forget to close our garage door. 
 
